@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <!-- My JS -->
+        <script src="js/main.js"></script>
+
+        <!-- My CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/4e44dba433.js" crossorigin="anonymous"></script>
+
+
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <title>Pomodoro Timer</title>
+    </head>
+    <body onload="template()">
+        <div id="container">
+            <!-- Heading -->
+            <div id="header">
+                <h1>POMODORO CLOCK</h1>
+            </div>
+
+            <!-- Timer -->
+            <div id="timer">
+                <div id="clock">
+                    <h2  id="type"></h2>
+                <div class="row">
+                    <div class="col-5">
+                        <h3 id="minutes"></h3>
+                    </div>
+                    <div class="col-2">
+                        <h3>:</h3>
+                    </div>
+                    <div class="col-5">
+                        <h3 id="seconds"></h3>
+                    </div>
+                </div>
+                <div id="buttons" class="row d-flex">
+                    <div class="col-3">
+                        <button id="play" class="btn" onclick="start()"><i class="fas fa-play fa-border"></i></button>
+                    </div>
+                    <div class="col-3">
+                        <button id="redo" class="btn" onclick="reset()"><i class="fas fa-redo fa-border"></i></button>
+                    </div>
+<!--                    <div class="col-3">-->
+<!--                        <button id="pause" class="btn"><i class="fas fa-pause fa-border"></i></button>-->
+<!--                    </div>-->
+                </div>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div id="settings">
+                <h2 style="float: left; width: 50%">BREAK LENGTH</h2>
+                <h2 style="float: right; width: 50%">SESSION LENGTH</h2>
+                <!-- Break Length Display -->
+                <div class="float-child">
+                    <div id="break">
+                        <button id="minus1" class="btn" onclick="breakDecrease()"><i class="fas fa-minus fa-border"></i></button>
+                        <span id="breakTime"></span>
+                        <button id="plus1" class="btn" onclick="breakIncrease()"><i class="fas fa-plus fa-border"></i></button>
+                    </div>
+                </div>
+                <!-- Session Length Display -->
+
+                <div class="float-child">
+                    <div id="session">
+                        <button id="minus2" class="btn" onclick="sessionDecrease()"><i class="fas fa-minus fa-border"></i></button>
+                        <span id="sessionTime"></span>
+                        <button id="plus2" class="btn" onclick="sessionIncrease()"><i class="fas fa-plus fa-border"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
